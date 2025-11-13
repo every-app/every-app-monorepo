@@ -31,16 +31,27 @@ const description = 'Make every app open source. No subscriptions or paywalls. O
         <div class="max-w-7xl mx-auto flex items-center justify-between">
           <img
             src="/transparent-logo.png"
-            alt="EveryApp Logo"
+            alt="Every App Logo"
             class="w-12 h-12 opacity-80 hover:opacity-100 transition-opacity"
           />
-          <nav>
+          <nav class="flex items-center gap-6">
             <a 
-              href="/guides/getting-started/introduction" 
-              class="text-white text-base font-medium hover:text-stone-300 transition-colors"
+              href="https://discord.gg/EpwPGyDn"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="opacity-80 hover:opacity-100 transition-opacity"
+              aria-label="Join our Discord"
             >
-              Docs
+              <svg viewBox="0 0 256 199" width="24" height="24" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                <path d="M216.856 16.597A208.502 208.502 0 0 0 164.042 0c-2.275 4.113-4.933 9.645-6.766 14.046-19.692-2.961-39.203-2.961-58.533 0-1.832-4.4-4.55-9.933-6.846-14.046a207.809 207.809 0 0 0-52.855 16.638C5.618 67.147-3.443 116.4 1.087 164.956c22.169 16.555 43.653 26.612 64.775 33.193A161.094 161.094 0 0 0 79.735 175.3a136.413 136.413 0 0 1-21.846-10.632 108.636 108.636 0 0 0 5.356-4.237c42.122 19.702 87.89 19.702 129.51 0a131.66 131.66 0 0 0 5.355 4.237 136.07 136.07 0 0 1-21.886 10.653c4.006 8.02 8.638 15.67 13.873 22.848 21.142-6.58 42.646-16.637 64.815-33.213 5.316-56.288-9.08-105.09-38.056-148.36ZM85.474 135.095c-12.645 0-23.015-11.805-23.015-26.18s10.149-26.2 23.015-26.2c12.867 0 23.236 11.804 23.015 26.2.02 14.375-10.148 26.18-23.015 26.18Zm85.051 0c-12.645 0-23.014-11.805-23.014-26.18s10.148-26.2 23.014-26.2c12.867 0 23.236 11.804 23.015 26.2 0 14.375-10.148 26.18-23.015 26.18Z" fill="white"/>
+              </svg>
             </a>
+            <!-- <a --> 
+            <!--   href="/guides/getting-started/introduction" --> 
+            <!--   class="text-white text-base font-medium hover:text-stone-300 transition-colors" -->
+            <!-- > -->
+            <!--   Docs -->
+            <!-- </a> -->
           </nav>
         </div>
       </header>
@@ -100,14 +111,13 @@ const description = 'Make every app open source. No subscriptions or paywalls. O
           </div>
           <div class="pt-4 pb-4 border-b border-stone-800">
             <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
-              Not all great ideas make good businesses. The best possible cooking
-              app will not be a good business.
+              The best possible cooking app will not be a good business.
             </p>
           </div>
           <div class="pt-4 pb-4">
             <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
-              Open source apps will be 10x better quality and lead to more
-              interesting consumer apps.
+              Open source apps will be 10x better quality and result in more
+              interesting applications.
             </p>
           </div>
         </div>
@@ -120,7 +130,7 @@ const description = 'Make every app open source. No subscriptions or paywalls. O
             Goal
           </h2>
           <p class="text-[clamp(1.25rem,2.5vw,1.75rem)] text-stone-300 font-light leading-relaxed">
-            Every person in the world uses EveryApp for most services.
+            Every person in the world uses Every App.
           </p>
         </div>
       </section>
@@ -133,18 +143,15 @@ const description = 'Make every app open source. No subscriptions or paywalls. O
           </h2>
           <div class="space-y-6 text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
             <p>
-              Every App is a framework for building self hosted, full stack
+	      Open source contributors (like you) build and share amazing apps. Others discover your work and host it themselves — completely free.
+            </p>
+            <p>
+              Every App is a framework for building these self hosted, full stack
               applications.
             </p>
             <p>
               Apps are designed to be self-hosted on Cloudflare's Developer
-              Platform. They are open source so that you can customize them as
-              you please.
-            </p>
-            <p>
-              They're built in a serverless, pay by usage way. This means that
-              if it costs $0.01 per month to operate, that is all that you're
-              charged.
+	      Platform. Cloudflare has serverless functions, containers and databases which are pay by usage instead of fixed monthly prices enabling this simple and "free" hosting.
             </p>
             <p>
               As the framework matures, using new open source, full stack apps
@@ -158,23 +165,71 @@ const description = 'Make every app open source. No subscriptions or paywalls. O
       <section class="py-12 px-6 border-t border-stone-800">
         <div class="max-w-2xl mx-auto">
           <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-6">
-            Why should you build with EveryApp?
+            Why should you try Every App?
           </h2>
-          <p class="text-white">In progress...</p>
+          <div class="space-y-8">
+            <div class="pb-6 border-b border-stone-800">
+              <h3 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-semibold text-white mb-3">
+                For the community
+              </h3>
+              <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+	      Be part of a group of people who love to build for the sake of it. Learn from others experiences and read the code of other apps. This can be a place you meet friends, find jobs, or find co-founders for future ventures.
+              </p>
+            </div>
+            <div class="pb-6 border-b border-stone-800">
+              <h3 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-semibold text-white mb-3">
+                For your resume
+              </h3>
+              <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+                Having a project you're passionate about is the best way to differentiate yourself in the job hunt and interviews. Every App is aiming to be the easiest way to build, deploy and share your passion projects.
+              </p>
+            </div>
+            
+            <div class="pb-6 border-b border-stone-800">
+              <h3 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-semibold text-white mb-3">
+                To learn how to start a company
+              </h3>
+              <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+                Building a product is a key skill in company building. Get experience rapidly building and marketing products through Every App without being bogged down by the unsexy parts of starting a company like billing, scalability, and legal.
+              </p>
+            </div>
+            
+            <div class="pb-6 border-b border-stone-800">
+              <h3 class="text-[clamp(1.25rem,2.5vw,1.75rem)] font-semibold text-white mb-3">
+                For yourself
+              </h3>
+              <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+                Solve your own problems with the help of the community and have a central, free place for your side projects without duct taping together a bunch of services trying to upcharge you.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Get Involved Section -->
+      <section class="py-12 px-6 border-t border-stone-800">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-6">
+            Get Involved
+          </h2>
+          <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+            The best way to get involved is to join the <a href="https://discord.gg/EpwPGyDn" target="_blank" rel="noopener noreferrer" class="text-white underline hover:text-stone-200 transition-colors">Discord</a>. The framework will be ready to try by Thanksgiving. If you want to get an email reminder, email me at <a href="mailto:ben@everyapp.dev" class="text-white underline hover:text-stone-200 transition-colors">ben@everyapp.dev</a>.
+          </p>
         </div>
       </section>
 
       <!-- Footer -->
       <footer class="py-12 px-6 border-t border-stone-800">
         <div class="max-w-2xl mx-auto">
-          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <!-- <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <button class="px-8 py-3 bg-white text-[#0a0f0d] font-semibold rounded-md hover:bg-stone-200 transition-colors">
               Start Building
             </button>
             <button class="px-8 py-3 border border-stone-600 text-white font-semibold rounded-md hover:bg-stone-800 transition-colors">
               Get Involved
             </button>
-          </div>
+          </div> -->
           <p class="text-stone-400 text-base text-center">
             Make every app open source.
           </p>
