@@ -12,8 +12,7 @@ import { execWithIndentedOutput } from "@/lib/formatting";
 import type { CloudflareResources } from "@/commands/gateway/deploy/types";
 
 // Constants
-const EVERY_APP_REPO =
-  "git@github.com:coolapps-xyz/openeverything-packages.git";
+const EVERY_APP_REPO = "git@github.com:every-app/every-app-monorepo.git";
 const D1_DATABASE_NAME = "every-app-gateway";
 const KV_NAMESPACE_NAME = "every-app-gateway";
 const HOMEBASE_RELATIVE_PATH = "apps/every-app-gateway";
@@ -29,7 +28,10 @@ export async function setupCloudflareResources(): Promise<CloudflareResources> {
   return { d1DatabaseId, kvNamespaceId, accountId };
 }
 
-export async function cloneAndInstall(tmpDir: string, verbose: boolean = false): Promise<string> {
+export async function cloneAndInstall(
+  tmpDir: string,
+  verbose: boolean = false,
+): Promise<string> {
   console.log(chalk.bold("Cloning gateway repository..."));
   console.log(chalk.dim(`   Repository: ${EVERY_APP_REPO}\n`));
 
