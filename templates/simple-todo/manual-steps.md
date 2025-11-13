@@ -1,0 +1,8 @@
+- Creating kv and d1
+- Running initial migrations
+- Updating migration commands to migrate the correct database
+  - This is in package.json for `npm run db:migrate:dev`
+- Updating the app id for .env.local and .env.production
+- Updating the app name
+  - package.json
+  - wrangler.jsonc

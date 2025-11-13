@@ -1,0 +1,1 @@
+ALTER TABLE `todos` ADD `sort_key` text DEFAULT 'n' NOT NULL;

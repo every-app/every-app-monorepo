@@ -1,0 +1,262 @@
+/* Custom styles for Starlight documentation - Matching landing page */
+
+:root {
+  /* Dark theme matching landing page */
+  --sl-color-bg: #0a0f0d;
+  --sl-color-bg-nav: #0a0f0d;
+  --sl-color-bg-sidebar: #0a0f0d;
+  --sl-color-bg-inline-code: rgba(255, 255, 255, 0.1);
+
+  /* Text colors */
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f5f5f4; /* stone-100 */
+  --sl-color-gray-2: #d6d3d1; /* stone-300 */
+  --sl-color-gray-3: #a8a29e; /* stone-400 */
+  --sl-color-gray-4: #78716c; /* stone-500 */
+  --sl-color-gray-5: #57534e; /* stone-600 */
+  --sl-color-gray-6: #292524; /* stone-800 */
+
+  /* Text color defaults */
+  --sl-color-text: #d6d3d1; /* stone-300 */
+  --sl-color-text-accent: #ffffff;
+
+  /* Borders */
+  --sl-color-hairline: #292524; /* stone-800 */
+  --sl-color-hairline-light: #292524;
+  --sl-color-hairline-shade: #292524;
+
+  /* Links */
+  --sl-color-text-invert: #0a0f0d;
+  --sl-color-accent: #ffffff;
+  --sl-color-accent-high: #ffffff;
+  --sl-color-accent-low: rgba(255, 255, 255, 0.2);
+
+  /* Headings */
+  --sl-color-black: #ffffff;
+}
+
+/* Dark mode is the default */
+:root[data-theme="light"] {
+  /* Keep dark theme even in light mode */
+  --sl-color-bg: #0a0f0d;
+  --sl-color-bg-nav: #0a0f0d;
+  --sl-color-bg-sidebar: #0a0f0d;
+}
+
+/* Body and main content styling */
+.sl-markdown-content {
+  color: var(--sl-color-text);
+  font-weight: 300; /* font-light */
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6 {
+  color: #ffffff;
+  font-weight: 700; /* font-bold */
+}
+
+/* Sidebar styling */
+.sidebar-content {
+  background-color: #0a0f0d;
+}
+
+.sidebar-content a {
+  color: #d6d3d1; /* stone-300 */
+  transition: color 0.2s;
+}
+
+.sidebar-content a:hover {
+  color: #ffffff;
+}
+
+/* Header styling */
+.header {
+  background-color: #0a0f0d;
+}
+
+/* Code blocks */
+.sl-markdown-content pre {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #292524; /* stone-800 */
+}
+
+.sl-markdown-content code {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* Links */
+.sl-markdown-content a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #57534e; /* stone-600 */
+  transition: text-decoration-color 0.2s;
+}
+
+.sl-markdown-content a:hover {
+  text-decoration-color: #ffffff;
+}
+
+/* Tables */
+.sl-markdown-content table {
+  border-color: #292524; /* stone-800 */
+}
+
+.sl-markdown-content th,
+.sl-markdown-content td {
+  border-color: #292524; /* stone-800 */
+}
+
+.sl-markdown-content th {
+  color: #ffffff;
+}
+
+/* Navigation */
+.pagination-links a {
+  background-color: transparent;
+  border: 1px solid #57534e; /* stone-600 */
+  color: #ffffff;
+  transition: background-color 0.2s;
+}
+
+.pagination-links a:hover {
+  background-color: #292524; /* stone-800 */
+}
+
+/* Right sidebar (table of contents) */
+.right-sidebar {
+  border-left: 1px solid #292524; /* stone-800 */
+}
+
+.right-sidebar a {
+  color: #a8a29e; /* stone-400 */
+  transition: color 0.2s;
+}
+
+.right-sidebar a:hover {
+  color: #ffffff;
+}
+
+/* Fix sidebar active/current page highlighting */
+.sidebar-content a[aria-current="page"],
+.sidebar-content a[aria-current="page"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-radius: 0.375rem;
+}
+
+/* Mobile TOC dropdown button - make it dark with subtle background */
+#starlight__on-this-page--mobile {
+  border-bottom: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0.375rem !important;
+  padding: 0.5rem 1rem !important;
+  color: #ffffff !important;
+}
+
+#starlight__on-this-page--mobile:hover {
+  background-color: transparent !important;
+}
+
+mobile-starlight-toc nav summary .toggle {
+  opacity: 60% !important;
+  text-decoration: none !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Remove default summary styling */
+mobile-starlight-toc summary {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+mobile-starlight-toc summary::-webkit-details-marker {
+  display: none !important;
+}
+
+mobile-starlight-toc summary::marker {
+  display: none !important;
+}
+
+/* Style the dropdown menu when open */
+mobile-starlight-toc details[open] {
+  background-color: transparent !important;
+}
+
+mobile-starlight-toc details[open] ul {
+  background-color: #0a0f0d !important;
+  border: 1px solid #292524 !important;
+  border-radius: 0.375rem !important;
+  margin-top: 0.5rem !important;
+  padding: 0.25rem !important;
+}
+
+/* Style individual dropdown items */
+mobile-starlight-toc details[open] ul li {
+  border-radius: 0.25rem !important;
+}
+
+mobile-starlight-toc details[open] ul li a {
+  color: #d6d3d1 !important;
+  padding: 0.5rem 0.75rem !important;
+  display: block !important;
+  border-radius: 0.25rem !important;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+mobile-starlight-toc details[open] ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+}
+
+mobile-starlight-toc details[open] ul li a[aria-current="true"] {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+/* Mobile menu burger button - transparent background with just icon */
+.mobile-menu-toggle,
+starlight-menu-button button,
+button[aria-label="Menu"],
+button[aria-controls*="sidebar"] {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0.5rem !important;
+}
+
+.mobile-menu-toggle:hover,
+starlight-menu-button button:hover,
+button[aria-label="Menu"]:hover,
+button[aria-controls*="sidebar"]:hover {
+  background-color: transparent !important;
+}
+
+/* Remove padding to the left of "On this page" */
+mobile-starlight-toc,
+mobile-starlight-toc nav,
+mobile-starlight-toc summary {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+mobile-starlight-toc nav summary .toggle {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Hide mobile preferences section in sidebar */
+.mobile-preferences,
+div.mobile-preferences {
+  display: none !important;
+}

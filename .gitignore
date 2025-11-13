@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.claude/settings.local.json
+**/.output/
+**/.tanstack/
+.wrangler
+.dev.vars*
+*.db
+*.db-wal
+*.db-shm
+.env
+opencode.json
+opencode.jsonc

@@ -1,0 +1,39 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "every-simple-todo-template",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2025-09-02",
+  "compatibility_flags": ["nodejs_compat"],
+  "dev": {
+    "port": 3001,
+  },
+  "assets": {
+    "directory": ".output/public",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "vars": {
+    "CORE_APP_URL": "https://every-app-gateway.bensenescu.workers.dev",
+  },
+  "services": [
+    {
+      "binding": "CORE_APP_SERVICE",
+      "service": "every-app-gateway",
+    },
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "27988928b64b47d294bcfa1ad5aa0ed5",
+    },
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "every-simple-todo-template",
+      "database_id": "ee2bec54-c197-4389-a35b-1454b6b28a90",
+      "migrations_dir": "drizzle",
+    },
+  ],
+}

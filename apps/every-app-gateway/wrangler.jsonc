@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "every-app-gateway",
+  "main": ".output/server/index.mjs",
+  "compatibility_date": "2025-08-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "dev": {
+    "port": 3000,
+  },
+  "assets": {
+    "directory": ".output/public",
+  },
+  "observability": {
+    "enabled": true,
+  },
+  "kv_namespaces": [
+    {
+      "binding": "every-app-gateway",
+      "id": "d64e3ceace134a9880055015cbc73265",
+    },
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "every-app-gateway",
+      "database_id": "a60cae9c-54f1-4ac8-a2a8-d6cf5a9273d5",
+      "migrations_dir": "drizzle",
+    },
+  ],
+}

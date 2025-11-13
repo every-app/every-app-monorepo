@@ -1,0 +1,54 @@
+{
+  "name": "@every-app/cli",
+  "author": "",
+  "description": "Every CLI - Command line tool for deploying and managing Every applications",
+  "license": "MIT",
+  "type": "module",
+  "version": "0.0.3",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "every": "./dist/index.js",
+    "@every-app/cli": "./dist/index.js",
+    "__every_bash_complete": "./dist/bash-complete.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "types:check": "tsc --noEmit",
+    "prebuild": "tsc",
+    "build": "tsup --silent",
+    "build:prepublish": "npm ci --ignore-scripts && npm run types:check && npm run build",
+    "prepublishOnly": "npm run build:prepublish",
+    "postinstall": "every install"
+  },
+  "tsup": {
+    "entry": {
+      "index": "src/bin/cli.ts",
+      "bash-complete": "src/bin/bash-complete.ts"
+    },
+    "format": [
+      "esm"
+    ],
+    "tsconfig": "tsconfig.json",
+    "clean": true,
+    "splitting": true,
+    "minify": true
+  },
+  "dependencies": {
+    "@stricli/auto-complete": "^1.2.4",
+    "@stricli/core": "^1.2.4",
+    "chalk": "^5.6.2",
+    "enquirer": "^2.4.1",
+    "execa": "^9.6.0",
+    "jsonc-parser": "^3.3.1",
+    "smol-toml": "^1.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.13",
+    "tsup": "^6.7.0",
+    "typescript": "5.9.3"
+  }
+}

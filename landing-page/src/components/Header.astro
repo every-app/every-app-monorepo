@@ -1,0 +1,60 @@
+---
+import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro"
+
+import type { Props } from '@astrojs/starlight/props';
+
+// Get the props to pass through to child components
+const props = Astro.props as Props;
+---
+
+<div class="header">
+	<div class="title-wrapper">
+		<a href="/" class="site-title">
+			<img
+				src="/transparent-logo.png"
+				alt="Every App Logo"
+			/>
+		</a>
+	</div>
+	<div class="right-group print:hidden">
+		<SocialIcons {...props} />
+	</div>
+</div>
+
+<style>
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	.title-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	.site-title {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	.site-title img {
+		height: 3rem;
+		width: auto;
+		object-fit: contain;
+	}
+
+	.right-group {
+		display: flex;
+		align-items: center;
+	}
+
+	/* Hide GitHub icon on small mobile screens */
+	@media (max-width: 640px) {
+		.right-group :global(a[href*="github"]) {
+			display: none;
+		}
+	}
+</style>

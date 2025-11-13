@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "types:check": "pnpm -r run types:check",
+    "format:check": "pnpm -r run format:check",
+    "format:write": "pnpm -r run format:write",
+    "ci:check": "npx concurrently --names \"formatting\",\"types\" \"pnpm run format:check\" \"pnpm run types:check\"",
+    "dev": "npx concurrently --names \"todo-app,every-app-gateway\" --prefix-colors \"blue,green\" \"cd apps/todo-app && npm run dev\" \"cd apps/every-app-gateway && npm run dev\""
+  }
+}

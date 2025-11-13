@@ -1,0 +1,12 @@
+{
+  "entry": [
+    // Detect Tanstack Start Routes
+    "src/router.tsx",
+    "src/routes/**/*.{ts,tsx}",
+    // Better auth cli entrypoint
+    "src/auth/index.ts",
+  ],
+  "project": ["**/*.{js,ts,tsx}", "!src/routeTree.gen.ts"],
+  "ignore": ["src/routeTree.gen.ts"],
+  "ignoreDependencies": ["@tanstack/react-router-devtools", "daisyui"],
+}

@@ -1,0 +1,185 @@
+---
+import '../styles/global.css';
+
+const title = 'Every App';
+const description = 'Make every app open source. No subscriptions or paywalls. Own your data. Share with the world.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={String(description)} />
+
+    <!-- Preconnect to improve initial connection time -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-[#0a0f0d]">
+      <!-- Header -->
+      <header class="absolute top-0 left-0 right-0 z-10 px-6 py-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <img
+            src="/transparent-logo.png"
+            alt="EveryApp Logo"
+            class="w-12 h-12 opacity-80 hover:opacity-100 transition-opacity"
+          />
+          <nav>
+            <a 
+              href="/guides/getting-started/introduction" 
+              class="text-white text-base font-medium hover:text-stone-300 transition-colors"
+            >
+              Docs
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="relative min-h-screen px-6 flex items-center justify-center">
+        <div class="max-w-2xl mx-auto">
+          <h1 class="text-[clamp(3rem,10vw,7rem)] font-bold text-white leading-none tracking-tight mb-6">
+            EVERY APP
+          </h1>
+
+          <p class="text-[clamp(1.5rem,3vw,2rem)] text-white font-normal mb-6">
+            Make every app open source.
+          </p>
+
+          <div class="space-y-2 text-[clamp(1rem,2vw,1.25rem)] text-stone-400 font-light">
+            <p>No subscriptions or paywalls.</p>
+            <p>Unleash your creativity.</p>
+            <p>Share with the world.</p>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 mb-[env(safe-area-inset-bottom)]">
+          <svg
+            class="w-6 h-6 text-stone-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-label="Scroll down indicator"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <!-- Philosophy Section -->
+      <section class="py-12 px-6 border-t border-stone-800">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-6">
+            Philosophy
+          </h2>
+          <div class="pb-4 border-b border-stone-800">
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+              The best apps are made with love by people who use them.
+            </p>
+          </div>
+          <div class="pt-4 pb-4 border-b border-stone-800">
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+              Apps solving common problems should be free.
+            </p>
+          </div>
+          <div class="pt-4 pb-4 border-b border-stone-800">
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+              Not all great ideas make good businesses. The best possible cooking
+              app will not be a good business.
+            </p>
+          </div>
+          <div class="pt-4 pb-4">
+            <p class="text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+              Open source apps will be 10x better quality and lead to more
+              interesting consumer apps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Goal Section -->
+      <section class="py-12 px-6 border-t border-stone-800">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-6">
+            Goal
+          </h2>
+          <p class="text-[clamp(1.25rem,2.5vw,1.75rem)] text-stone-300 font-light leading-relaxed">
+            Every person in the world uses EveryApp for most services.
+          </p>
+        </div>
+      </section>
+
+      <!-- How Does It Work Section -->
+      <section class="py-12 px-6 border-t border-stone-800">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-6">
+            How does it work?
+          </h2>
+          <div class="space-y-6 text-[clamp(1rem,2vw,1.25rem)] text-stone-300 font-light leading-relaxed">
+            <p>
+              Every App is a framework for building self hosted, full stack
+              applications.
+            </p>
+            <p>
+              Apps are designed to be self-hosted on Cloudflare's Developer
+              Platform. They are open source so that you can customize them as
+              you please.
+            </p>
+            <p>
+              They're built in a serverless, pay by usage way. This means that
+              if it costs $0.01 per month to operate, that is all that you're
+              charged.
+            </p>
+            <p>
+              As the framework matures, using new open source, full stack apps
+              will be as easy as clicking "Install".
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Build Section -->
+      <section class="py-12 px-6 border-t border-stone-800">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-white mb-6">
+            Why should you build with EveryApp?
+          </h2>
+          <p class="text-white">In progress...</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 px-6 border-t border-stone-800">
+        <div class="max-w-2xl mx-auto">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <button class="px-8 py-3 bg-white text-[#0a0f0d] font-semibold rounded-md hover:bg-stone-200 transition-colors">
+              Start Building
+            </button>
+            <button class="px-8 py-3 border border-stone-600 text-white font-semibold rounded-md hover:bg-stone-800 transition-colors">
+              Get Involved
+            </button>
+          </div>
+          <p class="text-stone-400 text-base text-center">
+            Make every app open source.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
