@@ -1,4 +1,3 @@
-import { createCollection } from "@tanstack/db";
 import { queryCollectionOptions } from "@tanstack/query-db-collection";
 import { queryClient } from "./queryClient";
 import {
@@ -7,11 +6,18 @@ import {
   getAllTodos,
   updateTodo,
 } from "@/serverFunctions/todos";
+import { createCollection } from "@tanstack/react-db";
 import { lazyInitForWorkers } from "@/embedded-sdk/client";
+
+interface Todo {
+  id: string;
+  title: string;
+  completed: boolean;
+}
 
 export const todoCollection = lazyInitForWorkers(() =>
   createCollection(
-    queryCollectionOptions({
+    queryCollectionOptions<Todo>({
       queryKey: ["todos"],
       queryFn: async () => {
         const todos = await getAllTodos();
