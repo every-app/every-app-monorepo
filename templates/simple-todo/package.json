@@ -22,11 +22,10 @@
     "knip": "knip"
   },
   "dependencies": {
-    "@tanstack/db": "^0.4.14",
     "@tanstack/query-core": "^5.90.5",
-    "@tanstack/query-db-collection": "^0.2.36",
+    "@tanstack/query-db-collection": "^1.0.0",
     "@tanstack/query-sync-storage-persister": "^5.90.9",
-    "@tanstack/react-db": "^0.1.36",
+    "@tanstack/react-db": "^0.1.44",
     "@tanstack/react-query": "^5.85.5",
     "@tanstack/react-query-persist-client": "^5.90.9",
     "@tanstack/react-router": "^1.131.10",
